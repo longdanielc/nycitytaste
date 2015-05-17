@@ -1,0 +1,4 @@
+db.sqlite3
+*.pyc
+nycitytasteapp/oauth_secret.py
+nycitytaste/settings_secret.py
