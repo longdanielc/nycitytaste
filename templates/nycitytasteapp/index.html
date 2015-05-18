@@ -7,6 +7,7 @@
     <head>
         <title>nycitytasteapp</title>
         <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" />
+        <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
         <script src="{% static "js/jquery-1.4.min.js" %}"></script>
         <script type="text/javascript" language="javascript">
           jQuery.fn.center = function () {
@@ -50,27 +51,39 @@
         </script>
     </head>
 
-    <body align=center>
-        <h1>NYCityTaste.com</h1>
-        A different view of the city...<br /><br />     
-<div align="center">  
-   <div id="thumbnail">
-    <h3>Click on the image</h3>
-            {% for u in data %}
-            <a href="{{ u.images.standard_resolution.url }}"><img src="{{ u.images.thumbnail.url }}" border=1 rel="{{ u.caption.text }}" /> </a>
-            {% endfor %}
+    <body>
+<div class="header">
+        <p><span class="header">NYCityTaste...</span><span class="slogan">A different view of the city</span</p>
+</div>    
 
-    <p id="large"></p>
-   </div> 
-   <div id="large"></div>   
-<div id="background"></div>
+<div class="middle">
+    <div align="center">  
+       <div id="thumbnail">
+                <p>Click on an image to zoom</p>
+                {% for u in data %}
+                <a href="{{ u.images.standard_resolution.url }}"><img src="{{ u.images.thumbnail.url }}" border=1 rel="{{ u.caption.text }}" /> </a>
+                {% endfor %}
+
+        <p id="large"></p>
+       </div> 
+       <div id="large"></div>   
+    <div id="background"></div>
+    </div>
 </div>
 
-<!--        A different view of the city...<br /><br />
-            {% for u in data %}
-            <a href="{{ u.images.standard_resolution.url }}"><img src="{{ u.images.thumbnail.url }}" border=1 /></a>
-            {{ u.caption.text }}<br /><br /> 
-            {% endfor %} -->
+<div class="footer">
+</br>
+
+
+<p><a href="http://instagram.com/nycitytaste" border=0><img src="/static/images/Instagram_Icon.png" alt="Instagram Icon" height=35/></a> @nycitytaste  <a href="http://twitter.com/nycitytaste" border=0><img src="/static/images/Twitter_Icon.png" alt="Twitter Icon" height=35/></a> @nycitytaste <a href="http://github.com/longdanielc" border=0><img src="/static/images/Github_Icon.png" alt="Github Icon" height=35/></a> github.com/longdanielc</p>
+
+<p>Powered by <a href=http://www.DanWebsites.com>DanWebsites.com</a></p>
+</br>
+</br>
+</br>
+</br>
+
+</div>    
 
     </body>
 
