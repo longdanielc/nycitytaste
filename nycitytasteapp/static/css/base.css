@@ -14,6 +14,10 @@ a:link {
     color: #00CCFF;
 }
 
+a.internal {
+    color: #000000;
+}
+
 .header 
 {
     font-size: 64px;

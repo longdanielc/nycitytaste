@@ -5,9 +5,9 @@
 <html>
 
     <head>
+        <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css">
         <title>nycitytasteapp</title>
         <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" />
-        <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
         <script src="{% static "js/jquery-1.4.min.js" %}"></script>
         <script type="text/javascript" language="javascript">
           jQuery.fn.center = function () {
@@ -61,7 +61,7 @@
        <div id="thumbnail">
                 <p>Click on an image to zoom</p>
                 {% for u in data %}
-                <a href="{{ u.images.standard_resolution.url }}"><img src="{{ u.images.thumbnail.url }}" border=1 rel="{{ u.caption.text }}" /> </a>
+                <a href="{{ u.images.standard_resolution.url }}" class="internal"><img src="{{ u.images.thumbnail.url }}" border=0 rel="{{ u.caption.text }}" /> </a>
                 {% endfor %}
 
         <p id="large"></p>
